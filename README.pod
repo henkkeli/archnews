@@ -25,6 +25,8 @@ Open feed [n] in browser.
 
 Show help message and exit.
 
+=back
+
 =head1 DEPENDENCIES
 
 python
