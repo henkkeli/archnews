@@ -1,0 +1,30 @@
+#!/usr/bin/env python3
+
+import argparse
+import feedparser
+import time
+from subprocess import call
+
+URL = 'https://www.archlinux.org/feeds/news/'
+BROWSER = 'links'
+
+parser = argparse.ArgumentParser(description='Read ArchLinux news.')
+parser.add_argument('-s', '--show', metavar='n', type=int,
+                    help='Open feed [n] in browser.')
+
+def main(args=None):
+    args = parser.parse_args(args)
+
+    n = 1
+
+    for entry in feedparser.parse(URL).entries:
+        if args.show:
+            if n == args.show:
+                call([BROWSER, entry.links.pop().href])
+        else:
+            print ("[%d] %s" % (n, entry.title))
+  
+        n += 1
+
+if __name__ == '__main__':
+    main()
