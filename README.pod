@@ -1,0 +1,34 @@
+=head1 NAME
+
+archnews - Simple ArchLinux news reader
+
+=head1 SYNOPSIS
+
+I<archnews> [ -s I<n> ]
+
+=head1 DESCRIPTION
+
+Print a list of 10 most recent ArchLinux news to stdout. Then the -s switch can
+be used to display one of these.
+
+=head1 OPTIONS
+
+Without arguments a list of news is printed.
+
+=over 4
+
+=item B<-s, --show> I<n>
+
+Open feed [n] in browser.
+
+=item B<-h, --help>
+
+Show help message and exit.
+
+=head1 DEPENDENCIES
+
+```
+python
+python-feedparser
+links
+```
