@@ -27,8 +27,8 @@ Show help message and exit.
 
 =head1 DEPENDENCIES
 
-```
 python
+
 python-feedparser
+
 links
-```
