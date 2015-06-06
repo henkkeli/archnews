@@ -1,6 +1,6 @@
 =head1 NAME
 
-archnews - Simple ArchLinux news reader
+archnews - A simple ArchLinux news reader
 
 =head1 SYNOPSIS
 
