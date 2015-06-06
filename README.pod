@@ -4,12 +4,12 @@ archnews - Simple ArchLinux news reader
 
 =head1 SYNOPSIS
 
-I<archnews> [ -s I<n> ]
+I<archnews> [I<-h>] [I<n>]
 
 =head1 DESCRIPTION
 
-Print a list of 10 most recent ArchLinux news to stdout. Then the -s switch can
-be used to display one of these.
+Print a list of 10 most recent ArchLinux news to stdout, or display a summary
+of one of them.
 
 =head1 OPTIONS
 
@@ -17,9 +17,9 @@ Without arguments a list of news is printed.
 
 =over 4
 
-=item B<-s, --show> I<n>
+=item I<n>
 
-Show feed [n].
+Show summary of feed [n].
 
 =item B<-h, --help>
 
@@ -27,9 +27,6 @@ Show help message and exit.
 
 =back
 
-=head1 DEPENDENCIES
+=head1 WWW
 
-python
-
-python-feedparser
-
+https://github.com/henkkeli/archnews

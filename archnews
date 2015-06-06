@@ -2,12 +2,12 @@
 
 import argparse
 import feedparser
-import time
+from bs4 import BeautifulSoup
 
 URL = 'https://www.archlinux.org/feeds/news/'
 
 parser = argparse.ArgumentParser(description='Read ArchLinux news.')
-parser.add_argument('-s', '--show', metavar='n', type=int,
+parser.add_argument('show', metavar='n', type=int, nargs='?',
                     help='Show feed [n].')
 
 def main(args=None):
@@ -18,7 +18,7 @@ def main(args=None):
     for entry in feedparser.parse(URL).entries:
         if args.show:
             if n == args.show:
-                print (entry.summary_detail.value)
+                print (BeautifulSoup(entry.summary_detail.value).get_text())
         else:
             print ("[%d] %s" % (n, entry.title))
   
