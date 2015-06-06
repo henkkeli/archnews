@@ -19,7 +19,7 @@ Without arguments a list of news is printed.
 
 =item B<-s, --show> I<n>
 
-Open feed [n] in browser.
+Show feed [n].
 
 =item B<-h, --help>
 
@@ -33,4 +33,3 @@ python
 
 python-feedparser
 
-links
